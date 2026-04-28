@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import Login from './pages/Login';
 import Dashboard from './pages/Dashboard';
@@ -12,7 +12,12 @@ import AdminUsers from './pages/AdminUsers';
 import CourseContentEditor from './pages/CourseContentEditor';
 import ChapterContentEditor from './pages/ChapterContentEditor';
 import { AuthProvider, useAuth } from './context/AuthContext';
+import HomePage from './pages/HomePage';
 import './App.css';
+import AICourseGenerator from './pages/AICourseGenerator';
+
+// In your admin routes:
+
 
 const PrivateRoute = ({ children, adminOnly = false }) => {
   const { user, loading } = useAuth();
@@ -52,6 +57,7 @@ function AppRoutes() {
           </PrivateRoute>
         }
       />
+<Route path="/admin/courses/ai-generate" element={<AICourseGenerator />} />
       <Route
         path="/courses/:id"
         element={
@@ -116,7 +122,8 @@ function AppRoutes() {
           </PrivateRoute>
         }
       />
-      <Route path="/" element={<Navigate to="/dashboard" />} />
+      
+<Route path="/" element={<HomePage />} />
     </Routes>
   );
 }

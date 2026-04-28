@@ -97,6 +97,9 @@ function AdminCourses() {
           <button className="btn btn-primary" onClick={openCreateModal}>
             + Create Course
           </button>
+<button className="btn btn-outline" onClick={() => navigate('/admin/courses/ai-generate')}>
+  ✨ Generate with AI
+</button>
         </div>
 
         <div className="course-grid">

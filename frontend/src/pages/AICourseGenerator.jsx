@@ -197,7 +197,6 @@ Please create a comprehensive course curriculum. Use the provided documents as t
 
       setProgress(100);
       setProgressLabel('Done!');
-      setGeneratedCourse(normalized);
       setEditingCourse(JSON.parse(JSON.stringify(normalized)));
       setTimeout(() => setStep(3), 500);
     } catch (err) {
@@ -544,7 +543,7 @@ Please create a comprehensive course curriculum. Use the provided documents as t
             <div style={styles.saveBar}>
               <button
                 style={styles.regenerateBtn}
-                onClick={() => { setStep(1); setGeneratedCourse(null); setEditingCourse(null); }}
+                onClick={() => { setStep(1); setEditingCourse(null); }}
               >
                 ↺ Regenerate
               </button>

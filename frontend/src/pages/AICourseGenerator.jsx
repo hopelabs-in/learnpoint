@@ -18,7 +18,6 @@ function AICourseGenerator() {
     numModules: 3,
     chaptersPerModule: 3,
   });
-  const [generatedCourse, setGeneratedCourse] = useState(null);
   const [editingCourse, setEditingCourse] = useState(null);
   const [error, setError] = useState('');
   const [progress, setProgress] = useState(0);

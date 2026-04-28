@@ -17,7 +17,7 @@ function ChapterView() {
 
   useEffect(() => {
     fetchChapter();
-  }, [id]);
+  }, [id]); // eslint-disable-line react-hooks/exhaustive-deps
 
   const fetchChapter = async () => {
     try {

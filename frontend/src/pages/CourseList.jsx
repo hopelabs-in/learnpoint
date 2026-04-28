@@ -12,7 +12,7 @@ function CourseList() {
 
   useEffect(() => {
     fetchCourses();
-  }, []);
+  }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
   const fetchCourses = async () => {
     try {

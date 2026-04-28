@@ -19,7 +19,7 @@ function CourseContentEditor() {
 
   useEffect(() => {
     fetchCourse();
-  }, [id]);
+  }, [id]); // eslint-disable-line react-hooks/exhaustive-deps
 
   const fetchCourse = async () => {
     try {

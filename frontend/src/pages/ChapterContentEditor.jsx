@@ -8,7 +8,6 @@ function ChapterContentEditor() {
   const { id } = useParams(); // chapter id or 'new'
   const location = useLocation();
   const { API_URL } = useAuth();
-  const [chapter, setChapter] = useState(null);
   const [formData, setFormData] = useState({
     title: '',
     order: 1,
@@ -33,13 +32,12 @@ function ChapterContentEditor() {
       // Set defaults for new chapter
       setFormData(prev => ({ ...prev, order: 1 }));
     }
-  }, [id]);
+  }, [id]); // eslint-disable-line react-hooks/exhaustive-deps
 
   const fetchChapter = async () => {
     try {
       const response = await axios.get(`${API_URL}/chapters/${id}`);
       const chapterData = response.data.data;
-      setChapter(chapterData);
       setFormData({
         title: chapterData.title,
         order: chapterData.order,

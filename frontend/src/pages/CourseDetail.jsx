@@ -14,7 +14,7 @@ function CourseDetail() {
   useEffect(() => {
     fetchCourseDetails();
     fetchProgress();
-  }, [id]);
+  }, [id]); // eslint-disable-line react-hooks/exhaustive-deps
 
   const fetchCourseDetails = async () => {
     try {

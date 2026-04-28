@@ -25,7 +25,7 @@ function AdminUsers() {
   useEffect(() => {
     fetchUsers();
     fetchCourses();
-  }, []);
+  }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
   const fetchUsers = async () => {
     try {

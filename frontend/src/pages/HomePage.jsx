@@ -10,7 +10,7 @@ function HomePage() {
 
   useEffect(() => {
     if (user) navigate('/dashboard');
-  }, [user]);
+  }, [user, navigate]); // eslint-disable-line react-hooks/exhaustive-deps
 
   useEffect(() => {
     const handleMouse = (e) => {

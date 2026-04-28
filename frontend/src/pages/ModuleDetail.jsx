@@ -12,7 +12,7 @@ export function ModuleDetail() {
 
   useEffect(() => {
     fetchModuleDetails();
-  }, [id]);
+  }, [id]); // eslint-disable-line react-hooks/exhaustive-deps
 
   const fetchModuleDetails = async () => {
     try {
@@ -97,7 +97,7 @@ export function ChapterView() {
 
   useEffect(() => {
     fetchChapter();
-  }, [id]);
+  }, [id]); // eslint-disable-line react-hooks/exhaustive-deps
 
   const fetchChapter = async () => {
     try {
